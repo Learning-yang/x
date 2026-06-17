@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  ::selection {
+    @apply bg-xhs-200 text-xhs-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-xhs-500 hover:bg-xhs-600 text-white font-medium px-6 py-3 rounded-full transition shadow-soft disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center bg-xhs-50 hover:bg-xhs-100 text-xhs-600 font-medium px-6 py-3 rounded-full transition border border-xhs-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-gray-100;
+  }
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-xhs-400 focus:ring-2 focus:ring-xhs-100 outline-none transition bg-white;
+  }
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff6b8a 0%, #ff2442 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #fff1f3 0%, #ffe0e6 50%, #fff 100%);
+}
